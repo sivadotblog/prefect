@@ -1,0 +1,60 @@
+###
+### A complete description of a Prefect Deployment for flow 'github-stars'
+###
+name: abc-app-deploy
+description: null
+version: 002e5c56f39ab3c1a4e24d092ff47309
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: sandbox-pool
+tags: []
+parameters: {}
+schedule:
+  cron: 0 * * * *
+  timezone: null
+  day_or: true
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: github-stars
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 5458fba8-4901-4a3e-8655-43e9cb4d8410
+  _block_document_name: anonymous-83f32b85-851c-444d-b82f-934f52c79991
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage:
+  repository: https://github.com/sivadotblog/prefect/
+  reference: null
+  access_token: null
+  include_git_objects: true
+  _block_document_id: d7afab34-f6b0-4b83-b20a-71c2e98495e1
+  _block_document_name: github-shared-ws-repo-public-repo
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: prefect-sample-flow.py:github_stars
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    repos:
+      title: repos
+      position: 0
+  required:
+  - repos
+  definitions: null
+timestamp: '2023-08-07T18:14:23.480472+00:00'
+triggers: []
